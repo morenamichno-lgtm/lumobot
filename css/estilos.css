@@ -1,0 +1,229 @@
+/* Paleta de Colores: 
+   Azul Primario: #3b82f6 (O un azul más claro como #3babf6)
+   Gris de Texto: #333
+   Fondo Claro: #f8f9fa (Gris muy sutil, opcional)
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white; /* Fondo base blanco */
+    color: #333; /* Color de texto base */
+}
+
+/* --- Estilos de Navegación (Ajustes mínimos) --- */
+nav {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave para levantar la barra */
+}
+
+
+.nav-item {
+    margin-left: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item .nav-link {
+    color: #3b82f6 !important; /* Azul tech */
+    padding: 8px 15px;
+    display: block;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background-color: #3b82f6; /* Fondo azul al pasar el mouse */
+    transform: scale(1.05);
+}
+
+.nav-item:hover .nav-link {
+    color: white !important; /* Letra blanca al pasar el mouse */
+}
+
+/* --- ESTILOS PARA LA DIVISIÓN 1 (Centrado y Side-by-Side Moderno) --- */
+
+.division1-container {
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* Fondo ligeramente gris para destacar la sección principal */
+}
+
+.division1 {
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra el grupo (texto + imagen) horizontalmente */
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centrado dentro de su contenedor */
+    gap: 50px; /* Espacio entre el texto y la imagen */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en pantallas pequeñas */
+}
+
+.texto-principal {
+    max-width: 500px; /* Limita el ancho del texto */
+    text-align: left; /* Alineación del texto a la izquierda dentro de su bloque */
+}
+
+.texto-principal h2 {
+    color: #3b82f6;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.texto1 {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.bott {
+    /* Quitamos el float y margin-right, Flexbox se encarga */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.bott:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+/* --- Estilos de Secciones Modernas (Cards) --- */
+
+/* Estilo para las 3 características destacadas (reemplaza 'presentacion') */
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra elegante */
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" al pasar el mouse */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.feature-card .card-title {
+    color: #3b82f6;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+/* Estilo para las secciones Armado, Funciones, Creadores (Card grande) */
+.card-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card-section:hover {
+    transform: translateY(-3px);
+}
+
+.section-title {
+    color: #3b82f6;
+    font-size: 2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- Estilos de Footer Moderno --- */
+.modern-footer {
+    padding: 50px 20px;
+    background-color: #333; /* Fondo oscuro (gris oscuro o negro) para un contraste moderno */
+    color: white; 
+    border-top: none; 
+}
+
+.modern-footer h3 {
+    color: #3b82f6; /* Título azul en el footer */
+    margin-bottom: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-text p, .footer-copy {
+    color: #bbb; /* Texto gris claro para el cuerpo del footer */
+    margin-bottom: 5px;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer-social a {
+    margin-left: 15px;
+}
+
+/* --- Botón Volver al Comienzo (Ajustes de color) --- */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* ... (resto de estilos se mantienen) ... */
+    background-color: #3b82f6; 
+}
+
+#back-to-top:hover {
+    background-color: #2a69c6; 
+}
+
+/* --- Media Queries para Responsive Design --- */
+
+@media (max-width: 992px) {
+    /* En tabletas y móviles, el texto y la imagen se apilan en la división 1 */
+    .division1 {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .texto-principal {
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .footer-social {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 20px;
+    }
+    .division1-container {
+        padding: 40px 15px;
+    }
+    .texto-principal h2 {
+        font-size: 2em;
+    }
+}
